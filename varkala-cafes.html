@@ -3,80 +3,102 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Varkala Cafe & Beach Guide</title>
+    <title>Varkala Cafe Guide</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
     <style>
-        .subpage-header { padding: 120px 60px 50px; text-align: center; }
-        .route-container { max-width: 800px; margin: 0 auto 100px; padding: 0 40px; }
-        .route-step { display: flex; margin-bottom: 40px; background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 12px; padding: 30px; gap: 30px; }
-        .step-num { font-family: 'Playfair Display', serif; font-size: 3rem; color: var(--accent); opacity: 0.5; min-width: 60px; }
-        .step-content { width: 100%; }
-        .step-content h3 { color: var(--text-primary); margin-bottom: 10px; letter-spacing: 1px; font-size: 1.4rem; text-transform: none; }
-        .step-content p { color: var(--text-secondary); font-size: 0.95rem; }
+        .route-container { max-width: 900px; margin: 0 auto 100px; padding: 0 40px; }
+        .route-step { 
+            display: flex; margin-bottom: 30px; 
+            background: var(--card-bg); 
+            border: 1px solid var(--border-color); 
+            border-radius: 16px; padding: 30px; align-items: center; gap: 30px; 
+            backdrop-filter: blur(var(--glass-blur)); transition: all 0.3s ease; 
+            box-shadow: inset 0 0 0 2000px rgba(15, 17, 21, 0.75), 0 8px 25px rgba(0,0,0,0.15); 
+            background-size: cover; background-position: center; position: relative; overflow: hidden;
+        }
+        .route-step:hover { 
+            transform: translateY(-5px); border-color: rgba(212, 175, 55, 0.5); 
+            box-shadow: inset 0 0 0 2000px rgba(15, 17, 21, 0.55), 0 12px 35px rgba(0,0,0,0.3); 
+        }
+        .step-num { font-family: 'Playfair Display', serif; font-size: 3.5rem; color: var(--accent); opacity: 0.5; min-width: 70px; font-weight: 700; transition: opacity 0.3s ease; position: relative; z-index: 2;}
+        .route-step:hover .step-num { opacity: 0.9; }
+        .step-content { position: relative; z-index: 2; width: 100%; }
+        .step-content h3 { color: var(--text-primary); margin-bottom: 8px; letter-spacing: 1px; font-size: 1.35rem; text-shadow: 0 2px 6px rgba(0,0,0,0.9); }
+        .step-content p { color: #f1f5f9; font-size: 0.95rem; line-height: 1.6; text-shadow: 0 2px 4px rgba(0,0,0,0.9); }
+        .location-img-container {
+            width: 150px; height: 100px; flex-shrink: 0; border-radius: 8px; overflow: hidden; position: relative; z-index: 2;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+        .location-img-container img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease; }
+        .route-step:hover .location-img-container img { transform: scale(1.1); }
+        @media(max-width: 768px) {
+            .route-step { flex-direction: column; text-align: center; }
+            .location-img-container { width: 100%; height: 200px; }
+        }
     </style>
 </head>
 <body>
+    <nav class="navbar">
+        <div class="logo">Kerala Escape '26</div>
+        <ul class="nav-links">
+            <li><a href="index.html#day1">Day 1</a></li>
+            <li><a href="index.html#day2">Day 2</a></li>
+            <li><a href="index.html#day3">Day 3</a></li>
+            <li><a href="index.html#day4">Day 4</a></li>
+            <li><a href="varkala-stays.html">Hotels</a></li>
+            <li><a href="varkala-cafes.html">Cafes & Beaches</a></li>
+            <li><a href="members.html">Trip Members</a></li>
+        </ul>
+    </nav>
+    <a href="index.html#day2" class="back-nav"><i class="fa-solid fa-arrow-left"></i> Back to Itinerary</a>
+    
     <div class="subpage-header">
-        <h2>Day 2 Route</h2>
-        <p class="subtitle">Sip. Surf. Savor. Stroll.</p>
+        <h2>Day 2 Optimized Route</h2>
+        <p class="subtitle">Eat   Beach   Eat   Beach   Sunset</p>
     </div>
     <div class="route-container">
-        
-        <div class="route-step">
+        <div class="route-step" style="background-image: url('assets/images/coffee_temple_placeholder.jpg');">
             <div class="step-num">01</div>
+            <div class="location-img-container"><img src="assets/images/coffee_temple_placeholder.jpg" alt="Coffee Temple"></div>
             <div class="step-content">
                 <h3><i class="fa-solid fa-mug-hot" style="color:var(--accent)"></i> Coffee Temple (09:00 AM)</h3>
-                <p>Morning fuel. Ocean views. Exceptional coffee and hearty breakfast bowls right on the edge of the North Cliff.</p>
+                <p>Fuel up with a hearty breakfast right on the North Cliff overlooking the Arabian Sea. Exceptional coffee and nourishing breakfast bowls.</p>
             </div>
         </div>
-
-        <div class="route-step">
+        <div class="route-step" style="background-image: url('assets/images/beach3.jpg');">
             <div class="step-num">02</div>
+            <div class="location-img-container"><img src="assets/images/beach3.jpg" alt="Papanasam Beach"></div>
             <div class="step-content">
-                <h3><i class="fa-solid fa-camera" style="color:var(--accent)"></i> Trip is Life Cafe (10:30 AM)</h3>
-                <p>Aesthetic architecture and unbeatable cliffside views. Perfect for mid-morning aesthetics and fresh coastal breezes.</p>
-                <img src="images (6).jpg" alt="Trip is Life Cafe" class="step-img">
+                <h3><i class="fa-solid fa-umbrella-beach" style="color:var(--accent)"></i> Papanasam Beach (10:30 AM)</h3>
+                <p>Descend the cliff steps to the iconic main beach. Perfect for a refreshing morning swim, relaxing on the golden sand, and beginner surfing.</p>
             </div>
         </div>
-
-        <div class="route-step">
+        <div class="route-step" style="background-image: url('assets/images/trip_is_life.jpg');">
             <div class="step-num">03</div>
+            <div class="location-img-container"><img src="assets/images/trip_is_life.jpg" alt="Trip is Life"></div>
             <div class="step-content">
-                <h3><i class="fa-solid fa-umbrella-beach" style="color:var(--accent)"></i> Papanasam Beach (12:00 PM)</h3>
-                <p>Walk down the cliff steps. Good for swimming, relaxing, and beginner surfing under the sun.</p>
-                <img src="images (4).jpg" alt="Varkala Cliff Beach" class="step-img">
+                <h3><i class="fa-solid fa-utensils" style="color:var(--accent)"></i> Trip is Life Cafe (01:00 PM)</h3>
+                <p>Head to this vibrant, traveler-favorite cafe known for incredible bohemian ambiance, healthy fusion meals, and ice-cold smoothies.</p>
             </div>
         </div>
-
-        <div class="route-step">
+        <div class="route-step" style="background-image: url('assets/images/black-sand-beach.jpg');">
             <div class="step-num">04</div>
+            <div class="location-img-container"><img src="assets/images/black-sand-beach.jpg" alt="Black Sand Beach"></div>
             <div class="step-content">
-                <h3><i class="fa-solid fa-utensils" style="color:var(--accent)"></i> Darjeeling Cafe (02:00 PM)</h3>
-                <p>Bohemian vibes and incredible seafood. The definitive Varkala lunch experience.</p>
-                <img src="images (5).jpg" alt="Darjeeling Cafe" class="step-img">
+                <h3><i class="fa-solid fa-motorcycle" style="color:var(--accent)"></i> Thiruvambadi Beach / Black Sand Beach (03:30 PM)</h3>
+                <p>Hop on your rented scooties for a scenic coastal ride up north to the quieter Black Sand Beach for an intimate afternoon photoshoot and relaxing waves.</p>
             </div>
         </div>
-
-        <div class="route-step">
+        <div class="route-step" style="background-image: url('assets/images/cafe2.jpg');">
             <div class="step-num">05</div>
+            <div class="location-img-container"><img src="assets/images/cafe2.jpg" alt="Darjeeling Cafe"></div>
             <div class="step-content">
-                <h3><i class="fa-solid fa-motorcycle" style="color:var(--accent)"></i> Black Sand Beach (04:30 PM)</h3>
-                <p>A quick scooty ride north to Thiruvambadi Beach. Volcanic sands and a quieter shoreline.</p>
-                <img src="black-sand-beach.jpg" alt="Black Sand Beach" class="step-img">
+                <h3><i class="fa-solid fa-sun" style="color:var(--accent)"></i> Darjeeling Cafe & Cliff Sunset (05:30 PM)</h3>
+                <p>Return to the North Cliff to settle into Darjeeling Cafe or Cafe Italiano for the legendary Varkala sunset, followed by evening city shopping along the cliff pathway.</p>
             </div>
         </div>
-
-        <div class="route-step">
-            <div class="step-num">06</div>
-            <div class="step-content">
-                <h3><i class="fa-solid fa-pizza-slice" style="color:var(--accent)"></i> Cliff Sunset & Dinner (06:30 PM)</h3>
-                <p>Iconic sunset views followed by authentic wood-fired pizza at Cafe Italiano or Abba Restaurant, ending with souvenir shopping.</p>
-                <img src="wood-fired-pizza-oven.jpg" alt="Wood Fired Pizza" class="step-img">
-            </div>
-        </div>
-
     </div>
 </body>
 </html>

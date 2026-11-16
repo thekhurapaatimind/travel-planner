@@ -3,101 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Varkala Accommodation Options</title>
+    <title>Varkala Hotels</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
     <style>
-        .subpage-header {
-            padding: 150px 60px 50px;
-            text-align: center;
+        .hotel-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 40px; padding: 0 60px 100px; max-width: 1400px; margin: 0 auto; }
+        .hotel-card { 
+            background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 16px; padding: 40px; 
+            backdrop-filter: blur(var(--glass-blur)); transition: all 0.4s ease; 
+            box-shadow: inset 0 0 0 2000px rgba(15, 17, 21, 0.75), 0 10px 30px rgba(0,0,0,0.2); 
+            background-size: cover; background-position: center; position: relative;
         }
-        .hotel-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            padding: 0 60px 100px;
-            max-width: 1400px;
-            margin: 0 auto;
+        .hotel-card:hover { 
+            transform: translateY(-8px); border-color: rgba(212, 175, 55, 0.5); 
+            box-shadow: inset 0 0 0 2000px rgba(15, 17, 21, 0.55), 0 15px 40px rgba(0,0,0,0.5); 
         }
-        .hotel-card {
-            background: var(--card-bg);
-            border: 1px solid var(--border-color);
-            border-radius: 12px;
-            padding: 30px;
-        }
-        .hotel-card h3 {
-            color: var(--accent);
-            letter-spacing: 1px;
-            margin-bottom: 10px;
-        }
-        .hotel-price {
-            font-size: 1.5rem;
-            font-weight: 600;
-            margin-bottom: 20px;
-        }
-        .hotel-pros {
-            list-style: none;
-            margin-bottom: 25px;
-        }
-        .hotel-pros li {
-            margin-bottom: 10px;
-            font-size: 0.9rem;
-            color: var(--text-secondary);
-        }
-        .hotel-pros i {
-            color: var(--accent);
-            margin-right: 10px;
-        }
-        .back-nav {
-            position: fixed;
-            top: 30px; left: 60px;
-            color: var(--text-primary);
-            text-decoration: none;
-            font-size: 0.9rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            z-index: 1000;
-        }
-        .back-nav:hover { color: var(--accent); }
+        .hotel-card h3 { color: var(--accent); letter-spacing: 1px; margin-bottom: 12px; font-size: 1.8rem; font-family: 'Playfair Display', serif; text-shadow: 0 2px 6px rgba(0,0,0,0.9);}
+        .hotel-price { font-size: 1.5rem; font-weight: 700; margin-bottom: 25px; color: #fff; text-shadow: 0 2px 6px rgba(0,0,0,0.9);}
+        .hotel-pros { list-style: none; margin-bottom: 25px; position: relative; z-index: 2;}
+        .hotel-pros li { margin-bottom: 15px; font-size: 0.95rem; color: #f1f5f9; display: flex; align-items: flex-start; gap: 12px; line-height: 1.6; text-shadow: 0 2px 4px rgba(0,0,0,0.9);}
+        .hotel-pros i { color: var(--accent); margin-top: 5px; font-size: 1.1rem; }
     </style>
 </head>
 <body>
+    <nav class="navbar">
+        <div class="logo">Kerala Escape '26</div>
+        <ul class="nav-links">
+            <li><a href="index.html#day1">Day 1</a></li>
+            <li><a href="index.html#day2">Day 2</a></li>
+            <li><a href="index.html#day3">Day 3</a></li>
+            <li><a href="index.html#day4">Day 4</a></li>
+            <li><a href="varkala-stays.html">Hotels</a></li>
+            <li><a href="varkala-cafes.html">Cafes & Beaches</a></li>
+            <li><a href="members.html">Trip Members</a></li>
+        </ul>
+    </nav>
     <a href="index.html#day1" class="back-nav"><i class="fa-solid fa-arrow-left"></i> Back to Itinerary</a>
     
     <div class="subpage-header">
         <h2>Varkala Stays</h2>
-        <p class="subtitle">Options for 3 Rooms (Nov 28 - Nov 30)</p>
+        <p class="subtitle">Most Recommended Hotels for 3 Rooms (Nov 28 - Nov 30)</p>
     </div>
-
+    
     <div class="hotel-grid">
-        <div class="hotel-card">
+        <div class="hotel-card" style="background-image: url('https://images.unsplash.com/photo-1582719508461-905c673771fd?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80');">
+            <h3>Elixir Cliff Beach Resort</h3>
+            <div class="hotel-price">Luxury Pick</div>
+            <ul class="hotel-pros">
+                <li><i class="fa-solid fa-location-dot"></i> Unparalleled, secluded location directly on the cliff's edge offering panoramic views.</li>
+                <li><i class="fa-solid fa-water"></i> Sprawling property with a spectacular infinity pool overlooking the Arabian Sea.</li>
+                <li><i class="fa-solid fa-star"></i> Incredible aesthetic rooms perfect for our group to relax in extreme comfort.</li>
+            </ul>
+        </div>
+        
+        <div class="hotel-card" style="background-image: url('https://images.unsplash.com/photo-1571896349842-33c89424de2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80');">
             <h3>Clafouti Beach Resort</h3>
-            <div class="hotel-price">~₹25,851 <span style="font-size: 0.8rem; color: var(--text-secondary); font-weight: normal;">Base Total</span></div>
+            <div class="hotel-price">Classic Mid-Range</div>
             <ul class="hotel-pros">
-                <li><i class="fa-solid fa-location-dot"></i> Right on the edge of North Cliff</li>
-                <li><i class="fa-solid fa-water"></i> Direct ocean views and beach access</li>
-                <li><i class="fa-solid fa-utensils"></i> Great in-house sea-view restaurant</li>
+                <li><i class="fa-solid fa-location-dot"></i> Located right in the heart of the North Cliff action.</li>
+                <li><i class="fa-solid fa-water"></i> Direct ocean views with easy, private steps leading down to the beach.</li>
+                <li><i class="fa-solid fa-utensils"></i> Features one of the best in-house sea-view restaurants for lazy sunsets.</li>
             </ul>
         </div>
-
-        <div class="hotel-card">
-            <h3>Garden Bay Resort</h3>
-            <div class="hotel-price">~₹15,552 <span style="font-size: 0.8rem; color: var(--text-secondary); font-weight: normal;">Base Total</span></div>
-            <ul class="hotel-pros">
-                <li><i class="fa-solid fa-star"></i> High 4.7/5 User Rating</li>
-                <li><i class="fa-solid fa-leaf"></i> Peaceful environment with sea breezes</li>
-                <li><i class="fa-solid fa-scale-balanced"></i> Perfect balance of comfort and value</li>
-            </ul>
-        </div>
-
-        <div class="hotel-card">
+        
+        <div class="hotel-card" style="background-image: url('https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80');">
             <h3>InDa Hotel</h3>
-            <div class="hotel-price">~₹9,450 <span style="font-size: 0.8rem; color: var(--text-secondary); font-weight: normal;">Base Total</span></div>
+            <div class="hotel-price">Eco-Boutique</div>
             <ul class="hotel-pros">
-                <li><i class="fa-solid fa-tree"></i> Eco-boutique, rustic property</li>
-                <li><i class="fa-solid fa-mug-hot"></i> Famous InDa Cafe on premises</li>
-                <li><i class="fa-solid fa-person-walking"></i> Quiet escape, 5 mins from the cliff</li>
+                <li><i class="fa-solid fa-tree"></i> Aesthetic rustic property surrounded by lush greenery, providing a perfect tropical vibe.</li>
+                <li><i class="fa-solid fa-mug-hot"></i> Home to the famous InDa Cafe right on the premises for amazing breakfasts.</li>
+                <li><i class="fa-solid fa-person-walking"></i> A quiet sanctuary just a 5-minute walk inland from the bustling cliff.</li>
             </ul>
         </div>
     </div>
