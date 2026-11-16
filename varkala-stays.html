@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Varkala Accommodation Options</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .subpage-header {
+            padding: 150px 60px 50px;
+            text-align: center;
+        }
+        .hotel-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            padding: 0 60px 100px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        .hotel-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 30px;
+        }
+        .hotel-card h3 {
+            color: var(--accent);
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+        }
+        .hotel-price {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+        .hotel-pros {
+            list-style: none;
+            margin-bottom: 25px;
+        }
+        .hotel-pros li {
+            margin-bottom: 10px;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+        .hotel-pros i {
+            color: var(--accent);
+            margin-right: 10px;
+        }
+        .back-nav {
+            position: fixed;
+            top: 30px; left: 60px;
+            color: var(--text-primary);
+            text-decoration: none;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            z-index: 1000;
+        }
+        .back-nav:hover { color: var(--accent); }
+    </style>
+</head>
+<body>
+    <a href="index.html#day1" class="back-nav"><i class="fa-solid fa-arrow-left"></i> Back to Itinerary</a>
+    
+    <div class="subpage-header">
+        <h2>Varkala Stays</h2>
+        <p class="subtitle">Options for 3 Rooms (Nov 28 - Nov 30)</p>
+    </div>
+
+    <div class="hotel-grid">
+        <div class="hotel-card">
+            <h3>Clafouti Beach Resort</h3>
+            <div class="hotel-price">~₹25,851 <span style="font-size: 0.8rem; color: var(--text-secondary); font-weight: normal;">Base Total</span></div>
+            <ul class="hotel-pros">
+                <li><i class="fa-solid fa-location-dot"></i> Right on the edge of North Cliff</li>
+                <li><i class="fa-solid fa-water"></i> Direct ocean views and beach access</li>
+                <li><i class="fa-solid fa-utensils"></i> Great in-house sea-view restaurant</li>
+            </ul>
+        </div>
+
+        <div class="hotel-card">
+            <h3>Garden Bay Resort</h3>
+            <div class="hotel-price">~₹15,552 <span style="font-size: 0.8rem; color: var(--text-secondary); font-weight: normal;">Base Total</span></div>
+            <ul class="hotel-pros">
+                <li><i class="fa-solid fa-star"></i> High 4.7/5 User Rating</li>
+                <li><i class="fa-solid fa-leaf"></i> Peaceful environment with sea breezes</li>
+                <li><i class="fa-solid fa-scale-balanced"></i> Perfect balance of comfort and value</li>
+            </ul>
+        </div>
+
+        <div class="hotel-card">
+            <h3>InDa Hotel</h3>
+            <div class="hotel-price">~₹9,450 <span style="font-size: 0.8rem; color: var(--text-secondary); font-weight: normal;">Base Total</span></div>
+            <ul class="hotel-pros">
+                <li><i class="fa-solid fa-tree"></i> Eco-boutique, rustic property</li>
+                <li><i class="fa-solid fa-mug-hot"></i> Famous InDa Cafe on premises</li>
+                <li><i class="fa-solid fa-person-walking"></i> Quiet escape, 5 mins from the cliff</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
