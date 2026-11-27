@@ -6,6 +6,8 @@
     <title>A Serene Trip to Kerala | 2026</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600;700&family=Caveat:wght@500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preload" as="image" href="assets/images/beach1-mobile.webp" media="(max-width: 768px)">
+    <link rel="preload" as="image" href="assets/images/beach1.webp" media="(min-width: 769px)">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -19,12 +21,13 @@
             <li><a href="#day4">Day 4</a></li>
             <li><a href="varkala-stays.html">Hotel</a></li>
             <li><a href="varkala-cafes.html">Cafes &amp; Beaches</a></li>
+            <li><a href="documents.html">Documents</a></li>
             <li><a href="members.html">Trip Members</a></li>
         </ul>
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero-section parallax" style="background-image: url('assets/images/beach1.jpg');">
+    <section class="hero-section parallax hero-bg">
         <div class="overlay gradient-overlay"></div>
         <div class="hero-content">
             <h1 class="elegant-title">A Serene Trip to Kerala</h1>
@@ -36,7 +39,7 @@
 
     <div class="master-timeline-wrapper">
         <!-- ===================== Day 1 ===================== -->
-        <section id="day1" class="day-section parallax" style="background-image: url('assets/images/jatayu1.jpg');">
+        <section id="day1" class="day-section parallax" style="background-image: url('assets/images/jatayu1.webp');">
             <div class="overlay"></div>
             <div class="content-wrapper">
                 <div class="day-header">
@@ -45,7 +48,7 @@
                 </div>
                 <div class="itinerary-grid">
 
-                    <div class="info-card expandable" data-memory="d1-flight" style="background-image: url('assets/images/trv_airport.jpg');" onclick="toggleCard(this)">
+                    <div class="info-card expandable" data-memory="d1-flight" style="background-image: url('assets/images/trv_airport.webp');" onclick="toggleCard(this)">
                         <div class="timeline-dot-indicator"></div>
                         <div class="card-icon"><i class="fa-solid fa-plane-arrival"></i></div>
                         <div class="card-summary">
@@ -54,10 +57,11 @@
                             <p>IndiGo 6E-688 (1h 20m)</p>
                         </div>
                         <div class="card-details">
-                            <div class="detail-row"><strong>Details:</strong> Group flight from BLR. Hasnain connecting from Pune.</div>
+                            <div class="detail-row"><strong>Details:</strong> Group flight from BLR, Terminal 1. Boarding 10:10 AM, Zone 2; gate closes 25 min before departure. Hasnain connecting from Pune.</div>
                             <div class="detail-row ticket-links">
                                 <a href="assets/tickets/ayush_blr_trv.pdf" class="ticket-btn" target="_blank"><i class="fa-solid fa-file-pdf"></i> Ayush Ticket (PNR IC8QQW)</a>
                                 <a href="assets/tickets/group_blr_trv.pdf" class="ticket-btn" target="_blank"><i class="fa-solid fa-file-pdf"></i> Group Ticket (PNR R6BC9L)</a>
+                                <a href="assets/tickets/boarding_passes_blr_trv.pdf" class="ticket-btn" target="_blank"><i class="fa-solid fa-qrcode"></i> Boarding Passes (Seats 25A&ndash;F)</a>
                             </div>
                         </div>
                     </div>
@@ -76,7 +80,7 @@
                         </div>
                     </div>
 
-                    <div class="info-card expandable" data-memory="d1-jatayu" style="background-image: url('assets/images/jatayu2.jpg');" onclick="toggleCard(this)">
+                    <div class="info-card expandable" data-memory="d1-jatayu" style="background-image: url('assets/images/jatayu2.webp');" onclick="toggleCard(this)">
                         <div class="timeline-dot-indicator"></div>
                         <div class="card-icon"><i class="fa-brands fa-envira"></i></div>
                         <div class="card-summary">
@@ -93,7 +97,7 @@
                         </div>
                     </div>
 
-                    <div class="info-card expandable" data-memory="d1-checkin" style="background-image: url('assets/images/varkala_hotel_placeholder.jpg');" onclick="toggleCard(this)">
+                    <div class="info-card expandable" data-memory="d1-checkin" style="background-image: url('assets/images/varkala_hotel_placeholder.webp');" onclick="toggleCard(this)">
                         <div class="timeline-dot-indicator"></div>
                         <div class="card-icon"><i class="fa-solid fa-hotel"></i></div>
                         <div class="card-summary">
@@ -112,7 +116,7 @@
                         </div>
                     </div>
 
-                    <div class="info-card expandable" data-memory="d1-sunset" style="background-image: url('assets/images/beach2.jpg');" onclick="toggleCard(this)">
+                    <div class="info-card expandable" data-memory="d1-sunset" style="background-image: url('assets/images/beach2.webp');" onclick="toggleCard(this)">
                         <div class="timeline-dot-indicator"></div>
                         <div class="card-icon"><i class="fa-solid fa-sun"></i></div>
                         <div class="card-summary">
@@ -125,7 +129,7 @@
                         </div>
                     </div>
 
-                    <div class="info-card expandable" data-memory="d1-night-market" style="background-image: url('assets/images/cafe2.jpg');" onclick="toggleCard(this)">
+                    <div class="info-card expandable" data-memory="d1-night-market" style="background-image: url('assets/images/cafe2.webp');" onclick="toggleCard(this)">
                         <div class="timeline-dot-indicator"></div>
                         <div class="card-icon"><i class="fa-solid fa-bag-shopping"></i></div>
                         <div class="card-summary">
@@ -138,7 +142,7 @@
                         </div>
                     </div>
 
-                    <div class="info-card expandable" data-memory="d1-dinner" style="background-image: url('assets/images/cafe3.jpg');" onclick="toggleCard(this)">
+                    <div class="info-card expandable" data-memory="d1-dinner" style="background-image: url('assets/images/cafe3.webp');" onclick="toggleCard(this)">
                         <div class="timeline-dot-indicator"></div>
                         <div class="card-icon"><i class="fa-solid fa-utensils"></i></div>
                         <div class="card-summary">
@@ -155,7 +159,7 @@
         </section>
 
         <!-- ===================== Day 2 ===================== -->
-        <section id="day2" class="day-section parallax" style="background-image: url('assets/images/beach2.jpg');">
+        <section id="day2" class="day-section parallax" style="background-image: url('assets/images/beach2.webp');">
             <div class="overlay"></div>
             <div class="content-wrapper">
                 <div class="day-header">
@@ -165,7 +169,7 @@
                 </div>
                 <div class="itinerary-grid">
 
-                    <div class="info-card expandable" data-memory="d2-sunrise" style="background-image: url('assets/images/black-sand-beach.jpg');" onclick="toggleCard(this)">
+                    <div class="info-card expandable" data-memory="d2-sunrise" style="background-image: url('assets/images/black-sand-beach.webp');" onclick="toggleCard(this)">
                         <div class="timeline-dot-indicator"></div>
                         <div class="card-icon"><i class="fa-solid fa-person-walking"></i></div>
                         <div class="card-summary">
@@ -178,7 +182,7 @@
                         </div>
                     </div>
 
-                    <div class="info-card expandable" data-memory="d2-breakfast" style="background-image: url('assets/images/coffee_temple_placeholder.jpg');" onclick="toggleCard(this)">
+                    <div class="info-card expandable" data-memory="d2-breakfast" style="background-image: url('assets/images/coffee_temple_placeholder.webp');" onclick="toggleCard(this)">
                         <div class="timeline-dot-indicator"></div>
                         <div class="card-icon"><i class="fa-solid fa-mug-hot"></i></div>
                         <div class="card-summary">
@@ -192,7 +196,7 @@
                         </div>
                     </div>
 
-                    <div class="info-card expandable" data-memory="d2-temple-beach" style="background-image: url('assets/images/beach3.jpg');" onclick="toggleCard(this)">
+                    <div class="info-card expandable" data-memory="d2-temple-beach" style="background-image: url('assets/images/beach3.webp');" onclick="toggleCard(this)">
                         <div class="timeline-dot-indicator"></div>
                         <div class="card-icon"><i class="fa-solid fa-umbrella-beach"></i></div>
                         <div class="card-summary">
@@ -205,7 +209,7 @@
                         </div>
                     </div>
 
-                    <div class="info-card expandable" data-memory="d2-lunch" style="background-image: url('assets/images/cafe2.jpg');" onclick="toggleCard(this)">
+                    <div class="info-card expandable" data-memory="d2-lunch" style="background-image: url('assets/images/cafe2.webp');" onclick="toggleCard(this)">
                         <div class="timeline-dot-indicator"></div>
                         <div class="card-icon"><i class="fa-solid fa-utensils"></i></div>
                         <div class="card-summary">
@@ -218,7 +222,7 @@
                         </div>
                     </div>
 
-                    <div class="info-card expandable" data-memory="d2-ride" style="background-image: url('assets/images/scooty_placeholder.jpg');" onclick="toggleCard(this)">
+                    <div class="info-card expandable" data-memory="d2-ride" style="background-image: url('assets/images/scooty_placeholder.webp');" onclick="toggleCard(this)">
                         <div class="timeline-dot-indicator"></div>
                         <div class="card-icon"><i class="fa-solid fa-motorcycle"></i></div>
                         <div class="card-summary">
@@ -235,7 +239,7 @@
                         </div>
                     </div>
 
-                    <div class="info-card expandable" data-memory="d2-sunset" style="background-image: url('assets/images/trip_is_life.jpg');" onclick="toggleCard(this)">
+                    <div class="info-card expandable" data-memory="d2-sunset" style="background-image: url('assets/images/trip_is_life.webp');" onclick="toggleCard(this)">
                         <div class="timeline-dot-indicator"></div>
                         <div class="card-icon"><i class="fa-solid fa-sun"></i></div>
                         <div class="card-summary">
@@ -248,7 +252,7 @@
                         </div>
                     </div>
 
-                    <div class="info-card expandable" data-memory="d2-dinner" style="background-image: url('assets/images/cafe3.jpg');" onclick="toggleCard(this)">
+                    <div class="info-card expandable" data-memory="d2-dinner" style="background-image: url('assets/images/cafe3.webp');" onclick="toggleCard(this)">
                         <div class="timeline-dot-indicator"></div>
                         <div class="card-icon"><i class="fa-solid fa-bowl-food"></i></div>
                         <div class="card-summary">
@@ -274,7 +278,7 @@
                 </div>
                 <div class="itinerary-grid">
 
-                    <div class="info-card expandable" data-memory="d3-checkout" style="background-image: url('assets/images/varkala_hotel_placeholder.jpg');" onclick="toggleCard(this)">
+                    <div class="info-card expandable" data-memory="d3-checkout" style="background-image: url('assets/images/varkala_hotel_placeholder.webp');" onclick="toggleCard(this)">
                         <div class="timeline-dot-indicator"></div>
                         <div class="card-icon"><i class="fa-solid fa-door-open"></i></div>
                         <div class="card-summary">
@@ -287,7 +291,7 @@
                         </div>
                     </div>
 
-                    <div class="info-card expandable" data-memory="d3-train" style="background-image: url('assets/images/allapuzha_railway.jpg');" onclick="toggleCard(this)">
+                    <div class="info-card expandable" data-memory="d3-train" style="background-image: url('assets/images/allapuzha_railway.webp');" onclick="toggleCard(this)">
                         <div class="timeline-dot-indicator"></div>
                         <div class="card-icon"><i class="fa-solid fa-train"></i></div>
                         <div class="card-summary">
@@ -317,7 +321,7 @@
                         </div>
                     </div>
 
-                    <div class="info-card expandable" data-memory="d3-houseboat" style="background-image: url('assets/images/boathouse2.jpg');" onclick="toggleCard(this)">
+                    <div class="info-card expandable" data-memory="d3-houseboat" style="background-image: url('assets/images/boathouse2.webp');" onclick="toggleCard(this)">
                         <div class="timeline-dot-indicator"></div>
                         <div class="card-icon"><i class="fa-solid fa-ship"></i></div>
                         <div class="card-summary">
@@ -337,7 +341,7 @@
         </section>
 
         <!-- ===================== Day 4 ===================== -->
-        <section id="day4" class="day-section parallax" style="background-image: url('assets/images/kayaking2.jpg');">
+        <section id="day4" class="day-section parallax" style="background-image: url('assets/images/kayaking2.webp');">
             <div class="overlay"></div>
             <div class="content-wrapper">
                 <div class="day-header">
@@ -346,7 +350,7 @@
                 </div>
                 <div class="itinerary-grid">
 
-                    <div class="info-card expandable" data-memory="d4-kayak" style="background-image: url('assets/images/kayaking1.jpg');" onclick="toggleCard(this)">
+                    <div class="info-card expandable" data-memory="d4-kayak" style="background-image: url('assets/images/kayaking1.webp');" onclick="toggleCard(this)">
                         <div class="timeline-dot-indicator"></div>
                         <div class="card-icon"><i class="fa-solid fa-water"></i></div>
                         <div class="card-summary">
@@ -359,7 +363,7 @@
                         </div>
                     </div>
 
-                    <div class="info-card expandable" data-memory="d4-transfer" style="background-image: url('assets/images/road_trip2.jpg');" onclick="toggleCard(this)">
+                    <div class="info-card expandable" data-memory="d4-transfer" style="background-image: url('assets/images/road_trip2.webp');" onclick="toggleCard(this)">
                         <div class="timeline-dot-indicator"></div>
                         <div class="card-icon"><i class="fa-solid fa-suitcase-rolling"></i></div>
                         <div class="card-summary">
@@ -372,7 +376,7 @@
                         </div>
                     </div>
 
-                    <div class="info-card expandable" data-memory="d4-flights" style="background-image: url('assets/images/kochi_airport.avif');" onclick="toggleCard(this)">
+                    <div class="info-card expandable" data-memory="d4-flights" style="background-image: url('assets/images/kochi_airport.webp');" onclick="toggleCard(this)">
                         <div class="timeline-dot-indicator"></div>
                         <div class="card-icon"><i class="fa-solid fa-plane-departure"></i></div>
                         <div class="card-summary">

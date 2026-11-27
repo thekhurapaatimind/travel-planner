@@ -11,7 +11,7 @@
  */
 
 const MEMORY_DIR = 'assets/memories/';
-const EXTENSIONS = ['jpg', 'jpeg', 'png', 'webp'];
+const EXTENSIONS = ['webp', 'jpg', 'jpeg', 'png'];
 const TILTS = [[-7, 5], [4, -6], [-4, 8], [6, -3]];
 let captions = {};
 
