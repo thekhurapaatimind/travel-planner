@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="favicon-32.png" type="image/png" sizes="32x32">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <meta name="theme-color" content="#0f1115">
+    <title>Packing Checklist | Kerala Escape</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .pack-wrap { max-width: 860px; margin: 0 auto; padding: 0 40px 120px; }
+        .pack-tabs { display: flex; gap: 10px; justify-content: center; margin-bottom: 26px; }
+        .pack-tab {
+            padding: 9px 22px; border-radius: 30px; border: 1px solid rgba(212,175,55,0.4);
+            background: transparent; color: var(--accent); font: 600 0.8rem 'Inter', sans-serif;
+            letter-spacing: 2px; text-transform: uppercase; cursor: pointer;
+        }
+        .pack-tab.active { background: var(--accent); color: var(--bg-dark); }
+        .pack-tab:disabled { opacity: 0.4; cursor: default; }
+        .pack-status {
+            position: sticky; top: 76px; z-index: 50; background: rgba(15,17,21,0.92); backdrop-filter: blur(10px);
+            border: 1px solid var(--border-color); border-radius: 12px; padding: 14px 18px; margin-bottom: 28px;
+            display: flex; align-items: center; gap: 16px;
+        }
+        .pack-bar { flex: 1; height: 8px; border-radius: 8px; background: rgba(255,255,255,0.08); overflow: hidden; }
+        .pack-bar span { display: block; height: 100%; width: 0; background: linear-gradient(90deg, #b8862f, var(--accent)); transition: width 0.4s ease; }
+        .pack-count { font-weight: 700; font-size: 0.9rem; color: var(--accent); white-space: nowrap; }
+        .pack-reset { background: none; border: none; color: var(--text-secondary); font-size: 0.8rem; cursor: pointer; text-decoration: underline; }
+        .pack-note {
+            font-size: 0.88rem; color: #cbd5e1; background: rgba(212,175,55,0.08); border-left: 3px solid var(--accent);
+            padding: 12px 16px; border-radius: 6px; margin-bottom: 30px; line-height: 1.6;
+        }
+        .pack-group { margin-bottom: 30px; }
+        .pack-group h4 {
+            display: flex; align-items: center; gap: 10px; font-size: 0.8rem; letter-spacing: 3px; text-transform: uppercase;
+            color: var(--accent); padding-bottom: 8px; margin-bottom: 10px; border-bottom: 1px solid rgba(212,175,55,0.3);
+        }
+        .pack-group h4 small { margin-left: auto; color: var(--text-secondary); letter-spacing: 1px; font-weight: 600; }
+        .pack-item {
+            display: flex; align-items: flex-start; gap: 14px; padding: 11px 12px; border-radius: 10px; cursor: pointer;
+            transition: background 0.2s ease;
+        }
+        .pack-item:hover { background: rgba(255,255,255,0.04); }
+        .pack-item input { appearance: none; flex-shrink: 0; width: 22px; height: 22px; margin-top: 1px; border: 2px solid rgba(212,175,55,0.6); border-radius: 6px; cursor: pointer; display: grid; place-content: center; }
+        .pack-item input::after { content: '\2713'; font-weight: 700; font-size: 14px; color: var(--bg-dark); transform: scale(0); transition: transform 0.15s ease; }
+        .pack-item input:checked { background: var(--accent); border-color: var(--accent); }
+        .pack-item input:checked::after { transform: scale(1); }
+        .pack-text { font-size: 0.97rem; color: #f1f5f9; line-height: 1.45; }
+        .pack-text em { display: block; font-style: normal; font-size: 0.8rem; color: var(--text-secondary); margin-top: 2px; }
+        .pack-item.done .pack-text { opacity: 0.45; text-decoration: line-through; }
+        @media (max-width: 768px) {
+            .pack-wrap { padding: 0 16px 120px; }
+            .pack-status { top: 96px; padding: 12px 14px; }
+        }
+        @media print {
+            .navbar, .back-nav, .pack-tabs, .pack-status { display: none !important; }
+            body { background: #fff; color: #000; }
+            .pack-text, .pack-text em, .pack-group h4 { color: #000 !important; }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">Kerala Escape '26</div>
+        <ul class="nav-links">
+            <li><a href="index.html#day1">Day 1</a></li>
+            <li><a href="index.html#day2">Day 2</a></li>
+            <li><a href="index.html#day3">Day 3</a></li>
+            <li><a href="index.html#day4">Day 4</a></li>
+            <li><a href="varkala-stays.html">Hotel</a></li>
+            <li><a href="varkala-cafes.html">Cafes &amp; Beaches</a></li>
+            <li><a href="packing.html" style="color: var(--accent);">Packing</a></li>
+            <li><a href="documents.html">Documents</a></li>
+            <li><a href="members.html">Trip Members</a></li>
+        </ul>
+    </nav>
+    <a href="index.html" class="back-nav"><i class="fa-solid fa-arrow-left"></i> Back to Itinerary</a>
+
+    <div class="subpage-header">
+        <h2>Packing Checklist</h2>
+        <p class="subtitle">4 days &bull; beach, temple, houseboat &amp; kayaking</p>
+    </div>
+
+    <div class="pack-wrap">
+        <div class="pack-tabs">
+            <button class="pack-tab active" data-list="women">Women</button>
+            <button class="pack-tab" data-list="men" disabled title="Coming soon">Men &bull; soon</button>
+        </div>
+
+        <div class="pack-status">
+            <div class="pack-bar"><span id="pack-bar"></span></div>
+            <div class="pack-count" id="pack-count">0 / 0</div>
+            <button class="pack-reset" id="pack-reset">Reset</button>
+        </div>
+
+        <div class="pack-note">
+            <strong>Weather:</strong> hot and humid, around 25&ndash;32&deg;C, with a chance of a short shower.
+            <strong>Bags:</strong> 15 kg check-in + 7 kg cabin on both flights.
+            Ticks save on your own phone only, so everyone keeps their own list.
+        </div>
+
+        <div id="pack-list"></div>
+    </div>
+
+    <script>
+    const LISTS = {
+      women: [
+        { title: 'Documents & Money', icon: 'fa-id-card', items: [
+          ['Government photo ID (Aadhaar / passport / DL)', 'Needed for the flight, train, hotel and houseboat. Keep it in your cabin bag'],
+          ['Driving licence', 'Only if you will ride a scooty on Sunday'],
+          ['Tickets & boarding passes saved offline', 'All are on the site's Documents page'],
+          ['Cash in small notes (~₹2,000)', 'Autos, roadside lunch, temple, tips. Not every stall takes UPI'],
+          ['Debit / credit card + UPI working', ''],
+        ]},
+        { title: 'Clothes', icon: 'fa-shirt', items: [
+          ['4 light cotton or linen day outfits', 'Breathable and quick-drying; it is humid'],
+          ['1 traditional outfit for the temple', 'Saree, churidar or long skirt with shoulders covered (Sun morning)'],
+          ['1 nicer outfit for cafe dinners & photos', ''],
+          ['2 swimsuits', 'Black Beach, Papanasam'],
+          ['Cover-up / sarong', 'Papanasam is also a pilgrim beach, so cover up off the sand'],
+          ['Leggings or quick-dry trousers', 'For kayaking at 6:30 AM and the scooty ride'],
+          ['Sports bra', 'Kayaking'],
+          ['Light shawl or stole', 'Cold flights and AC; doubles as sun and temple cover'],
+          ['Sleepwear', ''],
+          ['Innerwear for 4 days + 1 spare', ''],
+          ['Compact umbrella or light rain jacket', 'November can bring a quick shower'],
+        ]},
+        { title: 'Footwear', icon: 'fa-shoe-prints', items: [
+          ['Flip-flops or slides', 'Beach and houseboat; you remove footwear at the temple and on the boat'],
+          ['Comfortable walking sneakers', 'Jatayu Earth Centre, cliff paths, airports'],
+          ['Sandals for evenings', ''],
+        ]},
+        { title: 'Sun & Water', icon: 'fa-sun', items: [
+          ['Sunscreen SPF 50, water-resistant', 'UV is very high; reapply after swimming'],
+          ['SPF lip balm', ''],
+          ['Sunglasses', ''],
+          ['Hat or cap', ''],
+          ['Scarf or bandana', 'Hair under the helmet on the scooty, dust on the drive'],
+          ['Quick-dry towel', ''],
+          ['Waterproof phone pouch', 'Kayaking and the boat'],
+          ['Zip-locks or a dry bag', 'For wet swimwear on the way to Alleppey'],
+          ['Aloe vera / after-sun gel', ''],
+          ['Reusable water bottle', ''],
+        ]},
+        { title: 'Toiletries & Personal Care', icon: 'fa-pump-soap', items: [
+          ['Toothbrush & toothpaste', ''],
+          ['Face wash & moisturiser', ''],
+          ['Shampoo & conditioner (travel size)', 'The houseboat may not provide them'],
+          ['Hair ties, clips & comb', 'Sea wind is strong on the cliff'],
+          ['Deodorant', ''],
+          ['Pads / tampons / menstrual cup', 'Carry enough; shops are limited on the houseboat'],
+          ['Intimate wipes & wet wipes', ''],
+          ['Tissues & hand sanitiser', ''],
+          ['Minimal waterproof makeup + remover', 'Humidity melts makeup fast'],
+          ['Safety pins', 'Saree, broken straps'],
+          ['Liquids in cabin bag under 100 ml each', ''],
+        ]},
+        { title: 'Health', icon: 'fa-kit-medical', items: [
+          ['Personal medicines (enough for 5 days)', ''],
+          ['Mosquito repellent', 'Essential on the backwaters at dusk'],
+          ['Motion sickness tablets', 'Winding drive to Jatayu, train and boat'],
+          ['Period pain relief', ''],
+          ['Paracetamol, antacid, ORS sachets', 'Heat and new food'],
+          ['Band-aids & antiseptic cream', 'Cliff steps, kayak paddles'],
+        ]},
+        { title: 'Tech', icon: 'fa-mobile-screen', items: [
+          ['Phone + charger', ''],
+          ['Power bank (cabin bag only)', 'Power banks are not allowed in check-in luggage'],
+          ['Earphones', ''],
+          ['Camera / GoPro + spare memory card', 'Two photos per activity for the memory envelopes'],
+          ['Multi-plug extension', 'Few sockets on the houseboat for 8 people'],
+        ]},
+        { title: 'Bags', icon: 'fa-bag-shopping', items: [
+          ['Small sling or daypack', 'Scooty day and Jatayu'],
+          ['Beach tote', ''],
+          ['Laundry bag', 'Keeps sandy, wet clothes apart'],
+          ['Space for shopping', 'Kasavu sarees, cliff jewellery'],
+        ]},
+        { title: 'Before You Leave Home', icon: 'fa-list-check', items: [
+          ['Web check-in done & boarding pass on phone', 'Flight 6E-688 boards 10:10 AM, Zone 2, Terminal 1'],
+          ['Reach BLR airport by 9:00 AM', ''],
+          ['Download offline Google Maps for Varkala & Alleppey', ''],
+          ['Tell your bank you are travelling', ''],
+        ]},
+      ],
+    };
+
+    const listEl = document.getElementById('pack-list');
+    let current = 'women';
+
+    function key(list) { return 'kerala-pack-' + list; }
+    function load(list) {
+      try { return JSON.parse(localStorage.getItem(key(list))) || {}; } catch (e) { return {}; }
+    }
+    function save(list, state) {
+      try { localStorage.setItem(key(list), JSON.stringify(state)); } catch (e) {}
+    }
+
+    function render() {
+      const state = load(current);
+      listEl.innerHTML = LISTS[current].map((g, gi) => `
+        <section class="pack-group">
+          <h4><i class="fa-solid ${g.icon}"></i> ${g.title} <small data-group="${gi}"></small></h4>
+          ${g.items.map(([name, note], ii) => {
+            const id = gi + '-' + ii;
+            const on = !!state[id];
+            return `<label class="pack-item ${on ? 'done' : ''}">
+              <input type="checkbox" data-id="${id}" ${on ? 'checked' : ''}>
+              <span class="pack-text">${name}${note ? `<em>${note}</em>` : ''}</span>
+            </label>`;
+          }).join('')}
+        </section>`).join('');
+      update();
+    }
+
+    function update() {
+      const state = load(current);
+      const boxes = listEl.querySelectorAll('input[type=checkbox]');
+      const done = [...boxes].filter(b => b.checked).length;
+      document.getElementById('pack-count').textContent = `${done} / ${boxes.length} packed`;
+      document.getElementById('pack-bar').style.width = (boxes.length ? done / boxes.length * 100 : 0) + '%';
+      listEl.querySelectorAll('small[data-group]').forEach(s => {
+        const gi = s.dataset.group;
+        const items = LISTS[current][gi].items.length;
+        const ticked = Object.keys(state).filter(k => k.startsWith(gi + '-') && state[k]).length;
+        s.textContent = `${ticked}/${items}`;
+      });
+    }
+
+    listEl.addEventListener('change', e => {
+      if (!e.target.matches('input[type=checkbox]')) return;
+      const state = load(current);
+      state[e.target.dataset.id] = e.target.checked;
+      save(current, state);
+      e.target.closest('.pack-item').classList.toggle('done', e.target.checked);
+      update();
+    });
+
+    document.getElementById('pack-reset').addEventListener('click', () => {
+      if (!confirm('Untick everything on this list?')) return;
+      save(current, {});
+      render();
+    });
+
+    document.querySelectorAll('.pack-tab').forEach(t => t.addEventListener('click', () => {
+      if (t.disabled || !LISTS[t.dataset.list]) return;
+      document.querySelectorAll('.pack-tab').forEach(x => x.classList.toggle('active', x === t));
+      current = t.dataset.list;
+      render();
+    }));
+
+    render();
+    </script>
+</body>
+</html>
