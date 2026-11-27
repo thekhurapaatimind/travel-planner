@@ -88,7 +88,7 @@
     <div class="pack-wrap">
         <div class="pack-tabs">
             <button class="pack-tab active" data-list="women">Women</button>
-            <button class="pack-tab" data-list="men" disabled title="Coming soon">Men &bull; soon</button>
+            <button class="pack-tab" data-list="men">Men</button>
         </div>
 
         <div class="pack-status">
@@ -187,10 +187,90 @@
           ['Tell your bank you are travelling', ''],
         ]},
       ],
+      men: [
+        { title: 'Documents & Money', icon: 'fa-id-card', items: [
+          ['Government photo ID (Aadhaar / passport / DL)', 'Needed for the flight, train, hotel and houseboat. Keep it in your cabin bag'],
+          ['Driving licence', 'Needed to ride a scooty on Sunday'],
+          ['Tickets & boarding passes saved offline', 'All are on the Documents page of this site'],
+          ['Cash in small notes (~₹2,000)', 'Autos, roadside lunch, temple, tips. Not every stall takes UPI'],
+          ['Debit / credit card + UPI working', ''],
+        ]},
+        { title: 'Clothes', icon: 'fa-shirt', items: [
+          ['4 light cotton or linen t-shirts / shirts', 'Breathable and quick-drying; it is humid'],
+          ['2 pairs of shorts', ''],
+          ['1 pair of light trousers or chinos', 'Flights, cafe dinners'],
+          ['Mundu / dhoti or full-length trousers for the temple', 'Men remove shirts and vests inside; shorts are not suitable'],
+          ['1 nicer shirt for cafe dinners & photos', ''],
+          ['2 swim shorts', 'Black Beach, Papanasam'],
+          ['Quick-dry t-shirt or rash guard', 'Kayaking at 6:30 AM and sun protection in the water'],
+          ['Light hoodie or overshirt', 'Cold flights and AC'],
+          ['Sleepwear', ''],
+          ['Innerwear & socks for 4 days + 1 spare', ''],
+          ['Compact umbrella or light rain jacket', 'November can bring a quick shower'],
+        ]},
+        { title: 'Footwear', icon: 'fa-shoe-prints', items: [
+          ['Flip-flops or slides', 'Beach and houseboat; you remove footwear at the temple and on the boat'],
+          ['Comfortable walking sneakers', 'Jatayu Earth Centre, cliff paths, airports'],
+          ['Sandals or casual shoes for evenings', ''],
+        ]},
+        { title: 'Sun & Water', icon: 'fa-sun', items: [
+          ['Sunscreen SPF 50, water-resistant', 'UV is very high; reapply after swimming'],
+          ['SPF lip balm', ''],
+          ['Sunglasses', ''],
+          ['Cap or hat', ''],
+          ['Quick-dry towel', ''],
+          ['Waterproof phone pouch', 'Kayaking and the boat'],
+          ['Zip-locks or a dry bag', 'For wet swimwear on the way to Alleppey'],
+          ['Reusable water bottle', ''],
+        ]},
+        { title: 'Toiletries & Grooming', icon: 'fa-pump-soap', items: [
+          ['Toothbrush & toothpaste', ''],
+          ['Face wash & moisturiser', ''],
+          ['Shampoo / body wash (travel size)', 'The houseboat may not provide them'],
+          ['Razor / trimmer + charger', ''],
+          ['Comb & hair product', ''],
+          ['Deodorant', ''],
+          ['Wet wipes, tissues & hand sanitiser', ''],
+          ['Anti-chafing powder or cream', 'Heat, humidity and long walks'],
+          ['Liquids in cabin bag under 100 ml each', ''],
+        ]},
+        { title: 'Health', icon: 'fa-kit-medical', items: [
+          ['Personal medicines (enough for 5 days)', ''],
+          ['Mosquito repellent', 'Essential on the backwaters at dusk'],
+          ['Motion sickness tablets', 'Winding drive to Jatayu, train and boat'],
+          ['Paracetamol, antacid, ORS sachets', 'Heat and new food'],
+          ['Band-aids & antiseptic cream', 'Cliff steps, kayak paddles'],
+        ]},
+        { title: 'Tech', icon: 'fa-mobile-screen', items: [
+          ['Phone + charger', ''],
+          ['Power bank (cabin bag only)', 'Power banks are not allowed in check-in luggage'],
+          ['Earphones', ''],
+          ['Camera / GoPro + spare memory card', 'Two photos per activity for the memory envelopes'],
+          ['Multi-plug extension', 'Few sockets on the houseboat for 8 people'],
+          ['Bluetooth speaker', 'Houseboat evening (keep the volume friendly)'],
+        ]},
+        { title: 'Bags', icon: 'fa-bag-shopping', items: [
+          ['Small backpack or sling', 'Scooty day and Jatayu'],
+          ['Laundry bag', 'Keeps sandy, wet clothes apart'],
+          ['Space for shopping', 'Mundu, spices, cliff souvenirs'],
+        ]},
+        { title: 'Before You Leave Home', icon: 'fa-list-check', items: [
+          ['Web check-in done & boarding pass on phone', 'Flight 6E-688 boards 10:10 AM, Zone 2, Terminal 1'],
+          ['Reach BLR airport by 9:00 AM', ''],
+          ['Download offline Google Maps for Varkala & Alleppey', ''],
+          ['Tell your bank you are travelling', ''],
+        ]},
+      ],
     };
 
     const listEl = document.getElementById('pack-list');
     let current = 'women';
+    try {
+      const q = new URLSearchParams(location.search).get('list');
+      const saved = localStorage.getItem('kerala-pack-tab');
+      if (LISTS[q]) current = q; else if (LISTS[saved]) current = saved;
+    } catch (e) {}
+    document.querySelectorAll('.pack-tab').forEach(x => x.classList.toggle('active', x.dataset.list === current));
 
     function key(list) { return 'kerala-pack-' + list; }
     function load(list) {
@@ -250,6 +330,7 @@
       if (t.disabled || !LISTS[t.dataset.list]) return;
       document.querySelectorAll('.pack-tab').forEach(x => x.classList.toggle('active', x === t));
       current = t.dataset.list;
+      try { localStorage.setItem('kerala-pack-tab', current); } catch (e) {}
       render();
     }));
 
