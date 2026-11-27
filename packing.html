@@ -54,7 +54,7 @@
         .pack-item.done .pack-text { opacity: 0.45; text-decoration: line-through; }
         @media (max-width: 768px) {
             .pack-wrap { padding: 0 16px 120px; }
-            .pack-status { top: 96px; padding: 12px 14px; }
+            .pack-status { top: 74px; padding: 12px 14px; }
         }
         @media print {
             .navbar, .back-nav, .pack-tabs, .pack-status { display: none !important; }
@@ -66,7 +66,8 @@
 <body>
     <nav class="navbar">
         <div class="logo">Kerala Escape '26</div>
-        <ul class="nav-links">
+        <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links"><span></span><span></span><span></span></button>
+        <ul class="nav-links" id="nav-links">
             <li><a href="index.html#day1">Day 1</a></li>
             <li><a href="index.html#day2">Day 2</a></li>
             <li><a href="index.html#day3">Day 3</a></li>
@@ -336,5 +337,6 @@
 
     render();
     </script>
+    <script src="nav.js"></script>
 </body>
 </html>
