@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Varkala Hotels</title>
+    <title>Our Varkala Stay</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
     <style>
-        .hotel-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 40px; padding: 0 60px 100px; max-width: 1400px; margin: 0 auto; }
+        .hotel-grid { display: grid; grid-template-columns: minmax(0, 720px); justify-content: center; gap: 40px; padding: 0 60px 100px; max-width: 1400px; margin: 0 auto; }
         .hotel-card { 
             background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 16px; padding: 40px; 
             backdrop-filter: blur(var(--glass-blur)); transition: all 0.4s ease; 
@@ -23,6 +23,7 @@
         .hotel-price { font-size: 1.5rem; font-weight: 700; margin-bottom: 25px; color: #fff; text-shadow: 0 2px 6px rgba(0,0,0,0.9);}
         .hotel-pros { list-style: none; margin-bottom: 25px; position: relative; z-index: 2;}
         .hotel-pros li { margin-bottom: 15px; font-size: 0.95rem; color: #f1f5f9; display: flex; align-items: flex-start; gap: 12px; line-height: 1.6; text-shadow: 0 2px 4px rgba(0,0,0,0.9);}
+        @media(max-width: 768px) { .hotel-grid { padding: 0 16px 100px; } .hotel-card { padding: 26px; } }
         .hotel-pros i { color: var(--accent); margin-top: 5px; font-size: 1.1rem; }
     </style>
 </head>
@@ -34,7 +35,7 @@
             <li><a href="index.html#day2">Day 2</a></li>
             <li><a href="index.html#day3">Day 3</a></li>
             <li><a href="index.html#day4">Day 4</a></li>
-            <li><a href="varkala-stays.html">Hotels</a></li>
+            <li><a href="varkala-stays.html">Hotel</a></li>
             <li><a href="varkala-cafes.html">Cafes & Beaches</a></li>
             <li><a href="members.html">Trip Members</a></li>
         </ul>
@@ -42,39 +43,21 @@
     <a href="index.html#day1" class="back-nav"><i class="fa-solid fa-arrow-left"></i> Back to Itinerary</a>
     
     <div class="subpage-header">
-        <h2>Varkala Stays</h2>
-        <p class="subtitle">Most Recommended Hotels for 3 Rooms (Nov 28 - Nov 30)</p>
+        <h2>Our Varkala Stay</h2>
+        <p class="subtitle">Confirmed &bull; 3 Rooms &bull; Sat Nov 28 &ndash; Mon Nov 30</p>
     </div>
-    
+
     <div class="hotel-grid">
-        <div class="hotel-card" style="background-image: url('https://images.unsplash.com/photo-1582719508461-905c673771fd?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80');">
-            <h3>Elixir Cliff Beach Resort</h3>
-            <div class="hotel-price">Luxury Pick</div>
+        <div class="hotel-card" style="background-image: url('assets/images/varkala_hotel_placeholder.jpg');">
+            <h3>Hello Varkala Beach Resort</h3>
+            <div class="hotel-price"><i class="fa-solid fa-circle-check" style="color:#4ade80"></i> Booked</div>
             <ul class="hotel-pros">
-                <li><i class="fa-solid fa-location-dot"></i> Unparalleled, secluded location directly on the cliff's edge offering panoramic views.</li>
-                <li><i class="fa-solid fa-water"></i> Sprawling property with a spectacular infinity pool overlooking the Arabian Sea.</li>
-                <li><i class="fa-solid fa-star"></i> Incredible aesthetic rooms perfect for our group to relax in extreme comfort.</li>
+                <li><i class="fa-solid fa-location-dot"></i> Black Beach, Varkala, Kerala 695141 &bull; steps from the Thiruvambadi black-sand beach.</li>
+                <li><i class="fa-solid fa-right-to-bracket"></i> Check-in: Sat, Nov 28, ~5:45 PM (after Jatayu Earth Centre).</li>
+                <li><i class="fa-solid fa-door-open"></i> Checkout: Mon, Nov 30, 5:30 AM for the 6:33 AM train from Varkala Sivagiri (VAK).</li>
+                <li><i class="fa-solid fa-motorcycle"></i> Scooties from Sun morning; return them Sun night.</li>
             </ul>
-        </div>
-        
-        <div class="hotel-card" style="background-image: url('https://images.unsplash.com/photo-1571896349842-33c89424de2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80');">
-            <h3>Clafouti Beach Resort</h3>
-            <div class="hotel-price">Classic Mid-Range</div>
-            <ul class="hotel-pros">
-                <li><i class="fa-solid fa-location-dot"></i> Located right in the heart of the North Cliff action.</li>
-                <li><i class="fa-solid fa-water"></i> Direct ocean views with easy, private steps leading down to the beach.</li>
-                <li><i class="fa-solid fa-utensils"></i> Features one of the best in-house sea-view restaurants for lazy sunsets.</li>
-            </ul>
-        </div>
-        
-        <div class="hotel-card" style="background-image: url('https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80');">
-            <h3>InDa Hotel</h3>
-            <div class="hotel-price">Eco-Boutique</div>
-            <ul class="hotel-pros">
-                <li><i class="fa-solid fa-tree"></i> Aesthetic rustic property surrounded by lush greenery, providing a perfect tropical vibe.</li>
-                <li><i class="fa-solid fa-mug-hot"></i> Home to the famous InDa Cafe right on the premises for amazing breakfasts.</li>
-                <li><i class="fa-solid fa-person-walking"></i> A quiet sanctuary just a 5-minute walk inland from the bustling cliff.</li>
-            </ul>
+            <a href="https://maps.app.goo.gl/pweppPYLYYF9hwog7" target="_blank" class="external-link-btn"><i class="fa-solid fa-map-location-dot"></i> Open in Google Maps</a>
         </div>
     </div>
 </body>

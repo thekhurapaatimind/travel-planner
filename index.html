@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>A Serene Trip to Kerala | 2026</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600;700&family=Caveat:wght@500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -17,33 +17,35 @@
             <li><a href="#day2">Day 2</a></li>
             <li><a href="#day3">Day 3</a></li>
             <li><a href="#day4">Day 4</a></li>
-            <li><a href="varkala-stays.html">Hotels</a></li>
-            <li><a href="varkala-cafes.html">Cafes & Beaches</a></li>
+            <li><a href="varkala-stays.html">Hotel</a></li>
+            <li><a href="varkala-cafes.html">Cafes &amp; Beaches</a></li>
             <li><a href="members.html">Trip Members</a></li>
         </ul>
     </nav>
+
     <!-- Hero Section -->
     <section class="hero-section parallax" style="background-image: url('assets/images/beach1.jpg');">
         <div class="overlay gradient-overlay"></div>
         <div class="hero-content">
             <h1 class="elegant-title">A Serene Trip to Kerala</h1>
-            <p class="subtitle">Nov 28 - Dec 1, 2026   8 Friends   Historic Archival Site</p>
+            <p class="subtitle">Nov 28 - Dec 1, 2026 &bull; 8 Friends &bull; Historic Archival Site</p>
             <a href="#day1" class="explore-btn">Explore Itinerary</a>
+            <p class="hero-hint"><i class="fa-regular fa-envelope"></i> Tap any card to open its envelope of memories</p>
         </div>
     </section>
 
     <div class="master-timeline-wrapper">
-        <!-- Day 1 -->
-        <section id="day1" class="day-section parallax" style="background-image: url('/assets/images/jatayu1.jpg');">
+        <!-- ===================== Day 1 ===================== -->
+        <section id="day1" class="day-section parallax" style="background-image: url('assets/images/jatayu1.jpg');">
             <div class="overlay"></div>
             <div class="content-wrapper">
                 <div class="day-header">
                     <h2>Day 01</h2>
-                    <h3>Nov 28   Arrival & Giant Eagle</h3>
+                    <h3>Sat, Nov 28 &bull; Arrival, Giant Eagle &amp; Cliff Sunset</h3>
                 </div>
                 <div class="itinerary-grid">
 
-                    <div class="info-card expandable" style="background-image: url('/assets/images/trv_airport.jpg');" onclick="toggleCard(this)">
+                    <div class="info-card expandable" data-memory="d1-flight" style="background-image: url('assets/images/trv_airport.jpg');" onclick="toggleCard(this)">
                         <div class="timeline-dot-indicator"></div>
                         <div class="card-icon"><i class="fa-solid fa-plane-arrival"></i></div>
                         <div class="card-summary">
@@ -54,107 +56,238 @@
                         <div class="card-details">
                             <div class="detail-row"><strong>Details:</strong> Group flight from BLR. Hasnain connecting from Pune.</div>
                             <div class="detail-row ticket-links">
-                                <a href="assets/tickets/ayush_blr_trv.pdf" class="ticket-btn" target="_blank"><i class="fa-solid fa-file-pdf"></i> Ayush Ticket (PDF)</a>
-                                <a href="assets/tickets/group_blr_trv.pdf" class="ticket-btn" target="_blank"><i class="fa-solid fa-file-pdf"></i> Group Ticket (PDF)</a>
+                                <a href="assets/tickets/ayush_blr_trv.pdf" class="ticket-btn" target="_blank"><i class="fa-solid fa-file-pdf"></i> Ayush Ticket (PNR IC8QQW)</a>
+                                <a href="assets/tickets/group_blr_trv.pdf" class="ticket-btn" target="_blank"><i class="fa-solid fa-file-pdf"></i> Group Ticket (PNR R6BC9L)</a>
                             </div>
                         </div>
                     </div>
 
-                    <div class="info-card expandable" style="background-image: url('assets/images/road_journey_placeholder.webp');" onclick="toggleCard(this)">
+                    <div class="info-card expandable" data-memory="d1-drive" style="background-image: url('assets/images/road_journey_placeholder.webp');" onclick="toggleCard(this)">
                         <div class="timeline-dot-indicator"></div>
                         <div class="card-icon"><i class="fa-solid fa-van-shuttle"></i></div>
                         <div class="card-summary">
-                            <span class="time">12:45 PM - 01:45 PM</span>
-                            <h4>Travel: Airport to Jatayu</h4>
-                            <p>16-Seater Urbania ( 8,500 total)</p>
+                            <span class="time">12:45 PM - 02:15 PM</span>
+                            <h4>Drive: Airport to Jatayu</h4>
+                            <p>16-Seater Urbania (&#8377;8,500 total)</p>
                         </div>
                         <div class="card-details">
-                            <div class="detail-row"><strong>Route:</strong> TRV Domestic Airport directly to Jatayu Earth Centre (approx. 1h drive).</div>
+                            <div class="detail-row"><strong>Route:</strong> TRV Domestic Airport to Jatayu Earth Centre, Chadayamangalam (~52 km, ~1h 15m).</div>
+                            <div class="detail-row"><strong>Lunch:</strong> Quick roadside stop on the way, 20 minutes max.</div>
                         </div>
                     </div>
 
-                    <div class="info-card expandable" style="background-image: url('assets/images/jatayu2.jpg');" onclick="toggleCard(this)">
+                    <div class="info-card expandable" data-memory="d1-jatayu" style="background-image: url('assets/images/jatayu2.jpg');" onclick="toggleCard(this)">
                         <div class="timeline-dot-indicator"></div>
                         <div class="card-icon"><i class="fa-brands fa-envira"></i></div>
                         <div class="card-summary">
-                            <span class="time">01:45 PM - 03:30 PM</span>
+                            <span class="time">02:15 PM - 04:30 PM</span>
                             <h4>Jatayu Earth Centre</h4>
                             <p>World's largest bird sculpture (Confirmed)</p>
                         </div>
                         <div class="card-details">
                             <ul class="pros-cons">
-                                <li><i class="fa-solid fa-check text-success"></i> Confirmed visit! Time allocated for the cable car ride and group photos at the summit.</li>
-                                <li><i class="fa-solid fa-camera text-success"></i> Perfect lighting for afternoon photography.</li>
+                                <li><i class="fa-solid fa-cable-car text-success"></i> Cable car up and down (~8 min each way). Skip the adventure zones to save time.</li>
+                                <li><i class="fa-solid fa-ticket text-success"></i> Budget ~&#8377;500 per person for entry + ropeway; confirm at the counter.</li>
+                                <li><i class="fa-solid fa-clock text-danger"></i> Ticket counter closes ~4:30 PM and crowds are heavy. Leave at 4:30 sharp for sunset.</li>
                             </ul>
                         </div>
                     </div>
 
-                    <div class="info-card link-card" style="background-image: url('assets/images/varkala_hotel_placeholder.jpg');">
+                    <div class="info-card expandable" data-memory="d1-checkin" style="background-image: url('assets/images/varkala_hotel_placeholder.jpg');" onclick="toggleCard(this)">
                         <div class="timeline-dot-indicator"></div>
-                        <a href="varkala-stays.html" class="full-link">
-                            <div class="card-icon"><i class="fa-solid fa-hotel"></i></div>
-                            <div class="card-summary">
-                                <span class="time">03:30 PM Onwards</span>
-                                <h4>Travel to Varkala & Check-in</h4>
-                                <p>Click to view our recommended hotels & check-in</p>
+                        <div class="card-icon"><i class="fa-solid fa-hotel"></i></div>
+                        <div class="card-summary">
+                            <span class="time">04:30 PM - 05:45 PM</span>
+                            <h4>Drive to Varkala &amp; Check-in</h4>
+                            <p>Hello Varkala Beach Resort &bull; Black Beach (Confirmed)</p>
+                        </div>
+                        <div class="card-details">
+                            <div class="detail-row"><strong>Stay:</strong> Hello Varkala Beach Resort, Black Beach, Varkala, Kerala 695141. 3 rooms, Sat Nov 28 &ndash; Mon Nov 30.</div>
+                            <div class="detail-row"><strong>Checkout:</strong> Monday, Nov 30 at 5:30 AM for the 6:33 AM train from Varkala Sivagiri (VAK).</div>
+                            <div class="detail-row">Drop bags in 10 minutes and head straight to the cliff for sunset.</div>
+                            <div class="detail-row ticket-links">
+                                <a href="https://maps.app.goo.gl/pweppPYLYYF9hwog7" target="_blank" class="external-link-btn"><i class="fa-solid fa-location-dot"></i> Open in Google Maps</a>
+                                <a href="varkala-stays.html" class="external-link-btn"><i class="fa-solid fa-hotel"></i> Hotel Page</a>
                             </div>
-                            <i class="fa-solid fa-arrow-right arrow-icon"></i>
-                        </a>
+                        </div>
+                    </div>
+
+                    <div class="info-card expandable" data-memory="d1-sunset" style="background-image: url('assets/images/beach2.jpg');" onclick="toggleCard(this)">
+                        <div class="timeline-dot-indicator"></div>
+                        <div class="card-icon"><i class="fa-solid fa-sun"></i></div>
+                        <div class="card-summary">
+                            <span class="time">06:00 PM</span>
+                            <h4>Sunset at Bindu's Cafe, North Cliff</h4>
+                            <p>Where everyone gathers to watch the sun go down</p>
+                        </div>
+                        <div class="card-details">
+                            <div class="detail-row">Try the coconut-milk cappuccino. The cliff path is pedestrian only and free to walk.</div>
+                        </div>
+                    </div>
+
+                    <div class="info-card expandable" data-memory="d1-night-market" style="background-image: url('assets/images/cafe2.jpg');" onclick="toggleCard(this)">
+                        <div class="timeline-dot-indicator"></div>
+                        <div class="card-icon"><i class="fa-solid fa-bag-shopping"></i></div>
+                        <div class="card-summary">
+                            <span class="time">07:15 PM</span>
+                            <h4>Cliff Walk &amp; Night Market</h4>
+                            <p>Silver jewellery, linen and souvenir stalls</p>
+                        </div>
+                        <div class="card-details">
+                            <div class="detail-row">Stroll the stone path along North Cliff while the shops light up.</div>
+                        </div>
+                    </div>
+
+                    <div class="info-card expandable" data-memory="d1-dinner" style="background-image: url('assets/images/cafe3.jpg');" onclick="toggleCard(this)">
+                        <div class="timeline-dot-indicator"></div>
+                        <div class="card-icon"><i class="fa-solid fa-utensils"></i></div>
+                        <div class="card-summary">
+                            <span class="time">08:00 PM</span>
+                            <h4>Group Dinner: Cafe del Mar</h4>
+                            <p>Top-rated on the cliff &bull; seafood and veg</p>
+                        </div>
+                        <div class="card-details">
+                            <div class="detail-row">Back to the hotel by 9:30 PM. Day 2 starts at 8:30 AM.</div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Day 2 -->
+        <!-- ===================== Day 2 ===================== -->
         <section id="day2" class="day-section parallax" style="background-image: url('assets/images/beach2.jpg');">
             <div class="overlay"></div>
             <div class="content-wrapper">
                 <div class="day-header">
                     <h2>Day 02</h2>
-                    <h3>Nov 29   Cafes, Beaches & Surf</h3>
+                    <h3>Sun, Nov 29 &bull; Temple, Beaches &amp; Cafes</h3>
+                    <a href="varkala-cafes.html" class="external-link-btn day-header-link"><i class="fa-solid fa-mug-hot"></i> Cafe &amp; Beach Guide</a>
                 </div>
                 <div class="itinerary-grid">
 
-                    <div class="info-card link-card" style="background-image: url('assets/images/cafe3.jpg');">
+                    <div class="info-card expandable" data-memory="d2-sunrise" style="background-image: url('assets/images/black-sand-beach.jpg');" onclick="toggleCard(this)">
                         <div class="timeline-dot-indicator"></div>
-                        <a href="varkala-cafes.html" class="full-link">
-                            <div class="card-icon"><i class="fa-solid fa-utensils"></i></div>
-                            <div class="card-summary">
-                                <span class="time">Full Day Itinerary</span>
-                                <h4>Optimized Cafe & Beach Guide</h4>
-                                <p>Explore the ultimate Eat   Beach   Eat loop (Trip is Life Cafe, Coffee Temple, Darjeeling)</p>
-                            </div>
-                            <i class="fa-solid fa-arrow-right arrow-icon"></i>
-                        </a>
+                        <div class="card-icon"><i class="fa-solid fa-person-walking"></i></div>
+                        <div class="card-summary">
+                            <span class="time">07:30 AM &bull; Optional</span>
+                            <h4>Sunrise Walk on Black Beach</h4>
+                            <p>Thiruvambadi black-sand stretch, right by the hotel</p>
+                        </div>
+                        <div class="card-details">
+                            <div class="detail-row">Quiet before the crowds. Back by 8:15 for breakfast.</div>
+                        </div>
                     </div>
 
-                    <div class="info-card expandable" style="background-image: url('assets/images/scooty_placeholder.jpg');" onclick="toggleCard(this)">
+                    <div class="info-card expandable" data-memory="d2-breakfast" style="background-image: url('assets/images/coffee_temple_placeholder.jpg');" onclick="toggleCard(this)">
+                        <div class="timeline-dot-indicator"></div>
+                        <div class="card-icon"><i class="fa-solid fa-mug-hot"></i></div>
+                        <div class="card-summary">
+                            <span class="time">08:30 AM</span>
+                            <h4>Breakfast: Coffee Temple + Scooty Pickup</h4>
+                            <p>Cold brews on North Cliff, then grab the scooties</p>
+                        </div>
+                        <div class="card-details">
+                            <div class="detail-row"><strong>Scooties:</strong> ~&#8377;400&ndash;800/day. Bring licence, ID and deposit; use authorised shops only.</div>
+                            <div class="detail-row">Scooties can't go on the cliff walkway, so park at the designated spots.</div>
+                        </div>
+                    </div>
+
+                    <div class="info-card expandable" data-memory="d2-temple-beach" style="background-image: url('assets/images/beach3.jpg');" onclick="toggleCard(this)">
+                        <div class="timeline-dot-indicator"></div>
+                        <div class="card-icon"><i class="fa-solid fa-umbrella-beach"></i></div>
+                        <div class="card-summary">
+                            <span class="time">10:00 AM</span>
+                            <h4>Janardhana Swamy Temple &amp; Papanasam Beach</h4>
+                            <p>2,000-year-old temple, then a swim at the main beach</p>
+                        </div>
+                        <div class="card-details">
+                            <div class="detail-row">Swim near the lifeguards. The beach is crowded in the morning during temple rituals.</div>
+                        </div>
+                    </div>
+
+                    <div class="info-card expandable" data-memory="d2-lunch" style="background-image: url('assets/images/cafe2.jpg');" onclick="toggleCard(this)">
+                        <div class="timeline-dot-indicator"></div>
+                        <div class="card-icon"><i class="fa-solid fa-utensils"></i></div>
+                        <div class="card-summary">
+                            <span class="time">01:00 PM</span>
+                            <h4>Lunch: Darjeeling Cafe</h4>
+                            <p>North Cliff &bull; sea views</p>
+                        </div>
+                        <div class="card-details">
+                            <div class="detail-row">Long lazy lunch out of the midday sun.</div>
+                        </div>
+                    </div>
+
+                    <div class="info-card expandable" data-memory="d2-ride" style="background-image: url('assets/images/scooty_placeholder.jpg');" onclick="toggleCard(this)">
                         <div class="timeline-dot-indicator"></div>
                         <div class="card-icon"><i class="fa-solid fa-motorcycle"></i></div>
                         <div class="card-summary">
-                            <span class="time">Morning Onwards</span>
-                            <h4>Scooty Rentals & Exploration</h4>
-                            <p>Self-ride scooties for effortless beach hopping</p>
+                            <span class="time">02:30 PM</span>
+                            <h4>Scooty Ride: Kappil or Anjengo</h4>
+                            <p>Pick one on the day</p>
                         </div>
                         <div class="card-details">
-                            <div class="detail-row">Rentals arranged on arrival in Varkala. Seamless travel between North Cliff, Papanasam Beach, and Thiruvambadi Black Sand Beach.</div>
+                            <ul class="pros-cons">
+                                <li><i class="fa-solid fa-water text-success"></i> <span><strong>Kappil Beach &amp; Lake (~7 km):</strong> beach and backwater in one spot, quiet and golden.</span></li>
+                                <li><i class="fa-solid fa-chess-rook text-success"></i> <span><strong>Anjengo Fort (~12 km):</strong> 17th-century British fort and fishing village.</span></li>
+                                <li><i class="fa-solid fa-bag-shopping text-success"></i> <span><strong>Optional ~4:45 PM:</strong> Swayamvara Silks, Maithanam, for Kerala Kasavu sarees (check closing time).</span></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="info-card expandable" data-memory="d2-sunset" style="background-image: url('assets/images/trip_is_life.jpg');" onclick="toggleCard(this)">
+                        <div class="timeline-dot-indicator"></div>
+                        <div class="card-icon"><i class="fa-solid fa-sun"></i></div>
+                        <div class="card-summary">
+                            <span class="time">05:45 PM</span>
+                            <h4>Sunset: Trip is Life Cafe, South Cliff</h4>
+                            <p>Quieter cliff, popular sunset spot</p>
+                        </div>
+                        <div class="card-details">
+                            <div class="detail-row">Sunset round two, from the other side of the cliff.</div>
+                        </div>
+                    </div>
+
+                    <div class="info-card expandable" data-memory="d2-dinner" style="background-image: url('assets/images/cafe3.jpg');" onclick="toggleCard(this)">
+                        <div class="timeline-dot-indicator"></div>
+                        <div class="card-icon"><i class="fa-solid fa-bowl-food"></i></div>
+                        <div class="card-summary">
+                            <span class="time">07:30 PM</span>
+                            <h4>Dinner: InDa Cafe</h4>
+                            <p>Lots of veg &amp; vegan &bull; backup: Mamma Chompas</p>
+                        </div>
+                        <div class="card-details">
+                            <div class="detail-row"><strong>Pack tonight.</strong> Checkout is 5:30 AM Monday.</div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Day 3 -->
+        <!-- ===================== Day 3 ===================== -->
         <section id="day3" class="day-section parallax" style="background-image: url('assets/images/boat1.webp');">
             <div class="overlay"></div>
             <div class="content-wrapper">
                 <div class="day-header">
                     <h2>Day 03</h2>
-                    <h3>Nov 30   Backwaters & Houseboat</h3>
+                    <h3>Mon, Nov 30 &bull; Backwaters &amp; Houseboat</h3>
                 </div>
                 <div class="itinerary-grid">
 
-                    <div class="info-card expandable" style="background-image: url('assets/images/allapuzha_railway.jpg');" onclick="toggleCard(this)">
+                    <div class="info-card expandable" data-memory="d3-checkout" style="background-image: url('assets/images/varkala_hotel_placeholder.jpg');" onclick="toggleCard(this)">
+                        <div class="timeline-dot-indicator"></div>
+                        <div class="card-icon"><i class="fa-solid fa-door-open"></i></div>
+                        <div class="card-summary">
+                            <span class="time">05:30 AM</span>
+                            <h4>Hotel Checkout</h4>
+                            <p>Hello Varkala Beach Resort &rarr; Varkala Sivagiri (VAK)</p>
+                        </div>
+                        <div class="card-details">
+                            <div class="detail-row">Return scooties the night before. Autos to the station.</div>
+                        </div>
+                    </div>
+
+                    <div class="info-card expandable" data-memory="d3-train" style="background-image: url('assets/images/allapuzha_railway.jpg');" onclick="toggleCard(this)">
                         <div class="timeline-dot-indicator"></div>
                         <div class="card-icon"><i class="fa-solid fa-train"></i></div>
                         <div class="card-summary">
@@ -171,18 +304,31 @@
                         </div>
                     </div>
 
-                    <div class="info-card expandable" style="background-image: url('assets/images/boathouse2.jpg');" onclick="toggleCard(this)">
+                    <div class="info-card expandable" data-memory="d3-alleppey" style="background-image: url('assets/images/boat2.webp');" onclick="toggleCard(this)">
+                        <div class="timeline-dot-indicator"></div>
+                        <div class="card-icon"><i class="fa-solid fa-shirt"></i></div>
+                        <div class="card-summary">
+                            <span class="time">09:00 AM - 11:30 AM</span>
+                            <h4>Breakfast in Alleppey</h4>
+                            <p>Optional: Pulickattil Handlooms for Kasavu sarees</p>
+                        </div>
+                        <div class="card-details">
+                            <div class="detail-row">Near Finishing Point boat jetty. Be at the houseboat before 12:00.</div>
+                        </div>
+                    </div>
+
+                    <div class="info-card expandable" data-memory="d3-houseboat" style="background-image: url('assets/images/boathouse2.jpg');" onclick="toggleCard(this)">
                         <div class="timeline-dot-indicator"></div>
                         <div class="card-icon"><i class="fa-solid fa-ship"></i></div>
                         <div class="card-summary">
                             <span class="time">12:00 PM Onwards</span>
-                            <h4>Houseboat Check-in & Overnight Cruise</h4>
-                            <p>3-Bedroom Deluxe Houseboat ( 20,000)</p>
+                            <h4>Houseboat Check-in &amp; Overnight Cruise</h4>
+                            <p>3-Bedroom Deluxe Houseboat (&#8377;20,000)</p>
                         </div>
                         <div class="card-details">
                             <div class="detail-row">Strict government backwater timing. Enjoy freshly prepared meals, scenic canals, and overnight docking.</div>
                             <div class="detail-row">
-                                <a href="https://www.bookyourhouseboat.com/houseboat/byh0164?id=kUaCJcf07nqQ01DT95oh&itinerary=4kWt479114ZBFLHBnTT7&menu=p4oKsolOKmvQqdy7Q062&guests=8&bedrooms=3&extraBeds=0&cruiseType=Day+%26+Night&category=Deluxe&price=21000&agent=917907589772" target="_blank" class="external-link-btn"><i class="fa-solid fa-link"></i> View Booking Details</a>
+                                <a href="https://www.bookyourhouseboat.com/houseboat/byh0164?id=kUaCJcf07nqQ01DT95oh&amp;itinerary=4kWt479114ZBFLHBnTT7&amp;menu=p4oKsolOKmvQqdy7Q062&amp;guests=8&amp;bedrooms=3&amp;extraBeds=0&amp;cruiseType=Day+%26+Night&amp;category=Deluxe&amp;price=21000&amp;agent=917907589772" target="_blank" class="external-link-btn"><i class="fa-solid fa-link"></i> View Booking Details</a>
                             </div>
                         </div>
                     </div>
@@ -190,50 +336,49 @@
             </div>
         </section>
 
-        <!-- Day 4 -->
+        <!-- ===================== Day 4 ===================== -->
         <section id="day4" class="day-section parallax" style="background-image: url('assets/images/kayaking2.jpg');">
             <div class="overlay"></div>
             <div class="content-wrapper">
                 <div class="day-header">
                     <h2>Day 04</h2>
-                    <h3>Dec 1   Kayaking & Departures</h3>
+                    <h3>Tue, Dec 1 &bull; Kayaking &amp; Departures</h3>
                 </div>
                 <div class="itinerary-grid">
 
-                    <div class="info-card expandable" style="background-image: url('assets/images/kayaking1.jpg');" onclick="toggleCard(this)">
+                    <div class="info-card expandable" data-memory="d4-kayak" style="background-image: url('assets/images/kayaking1.jpg');" onclick="toggleCard(this)">
                         <div class="timeline-dot-indicator"></div>
                         <div class="card-icon"><i class="fa-solid fa-water"></i></div>
                         <div class="card-summary">
                             <span class="time">06:30 AM - 08:30 AM</span>
                             <h4>Morning Backwater Kayaking</h4>
-                            <p>Alleppey Canals ( 4,800)</p>
+                            <p>Alleppey Canals (&#8377;4,800)</p>
                         </div>
                         <div class="card-details">
                             <div class="detail-row">Peaceful dawn paddle through narrow rustic canals before breakfast.</div>
                         </div>
                     </div>
 
-                    <!-- Checkout image updated to road_trip2.jpg -->
-                    <div class="info-card expandable" style="background-image: url('assets/images/road_trip2.jpg');" onclick="toggleCard(this)">
+                    <div class="info-card expandable" data-memory="d4-transfer" style="background-image: url('assets/images/road_trip2.jpg');" onclick="toggleCard(this)">
                         <div class="timeline-dot-indicator"></div>
                         <div class="card-icon"><i class="fa-solid fa-suitcase-rolling"></i></div>
                         <div class="card-summary">
                             <span class="time">09:00 AM - 12:30 PM</span>
-                            <h4>Houseboat Checkout & Tempo Traveller to COK</h4>
-                            <p>12-Seater Traveller ( 8,000   ~3.5h drive)</p>
+                            <h4>Houseboat Checkout &amp; Tempo Traveller to COK</h4>
+                            <p>12-Seater Traveller (&#8377;8,000 &bull; ~3.5h drive)</p>
                         </div>
                         <div class="card-details">
                             <div class="detail-row">Scenic drive from Alleppey to Cochin International Airport (COK).</div>
                         </div>
                     </div>
 
-                    <div class="info-card expandable" style="background-image: url('assets/images/kochi_airport.avif');" onclick="toggleCard(this)">
+                    <div class="info-card expandable" data-memory="d4-flights" style="background-image: url('assets/images/kochi_airport.avif');" onclick="toggleCard(this)">
                         <div class="timeline-dot-indicator"></div>
                         <div class="card-icon"><i class="fa-solid fa-plane-departure"></i></div>
                         <div class="card-summary">
-                            <span class="time">07:20 PM & 07:50 PM</span>
+                            <span class="time">07:20 PM &amp; 07:50 PM</span>
                             <h4>Flights Home from Kochi (COK)</h4>
-                            <p>Air India Express & IndiGo Flights</p>
+                            <p>Air India Express &amp; IndiGo Flights</p>
                         </div>
                         <div class="card-details">
                             <div class="detail-row"><strong>Group Flight (07:20 PM):</strong> Air India Express IX-2115 to BLR (PNR T753PM)</div>
@@ -249,9 +394,17 @@
         </section>
     </div>
 
+    <!-- Polaroid lightbox -->
+    <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+        <figure class="lightbox-polaroid">
+            <img id="lightbox-img" alt="">
+            <figcaption id="lightbox-cap"></figcaption>
+        </figure>
+    </div>
+
     <!-- Footer -->
     <footer class="footer">
-        <p>  2026 Kerala Escape   Historic Trip Archival Portal</p>
+        <p>&copy; 2026 Kerala Escape &bull; Historic Trip Archival Portal</p>
     </footer>
     <script src="script.js"></script>
 </body>
