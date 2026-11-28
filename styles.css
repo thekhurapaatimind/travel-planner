@@ -603,7 +603,7 @@ h3 {
 }
 
 .polaroid {
-    width: min(46%, 220px);
+    width: min(47%, 280px);
     background: #fbfaf5;
     padding: 10px 10px 0;
     border-radius: 2px;
@@ -627,7 +627,7 @@ h3 {
 
 .polaroid-photo {
     position: relative;
-    aspect-ratio: 1 / 1;
+    aspect-ratio: 4 / 3;
     background: #1f2328;
     overflow: hidden;
 }
