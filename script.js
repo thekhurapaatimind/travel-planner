@@ -94,7 +94,13 @@ function loadMemories(card) {
 function tryLoad(img, base, i, onSuccess) {
     if (i >= EXTENSIONS.length) return;
     const probe = new Image();
-    probe.onload = () => { img.src = probe.src; onSuccess(); };
+    probe.onload = () => {
+        img.src = probe.src;
+        const fig = img.closest('.polaroid');
+        fig.style.setProperty('--ar', `${probe.naturalWidth} / ${probe.naturalHeight}`);
+        fig.classList.toggle('portrait', probe.naturalHeight > probe.naturalWidth);
+        onSuccess();
+    };
     probe.onerror = () => tryLoad(img, base, i + 1, onSuccess);
     probe.src = `${base}.${EXTENSIONS[i]}`;
 }
